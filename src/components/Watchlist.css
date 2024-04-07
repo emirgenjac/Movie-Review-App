@@ -1,0 +1,11 @@
+.empty-watchlist-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    padding: 10px;
+
+}

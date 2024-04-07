@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+}
+
+.register-div-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-div{
+    width: 25rem;
+    height: 30rem;
+    display: grid;
+    grid-template-rows: 1fr 5fr  1fr 1fr;
+    background-color: var(--sec-color);
+    box-shadow: var(--box-shadow);
+}
+
+.register-div > .register-header {
+    display: flex;
+    justify-content: center;
+}
+
+.register-header{
+    font-family: var(--font-family);
+    color: var(--text-color);
+    font-size: 1.5em;
+    max-width: 25rem;
+}
+
+.register-form{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 25rem;
+    max-width: 25rem;
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+.register-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+    flex-direction: column;
+    width: 15rem;
+    height: 15rem;
+}
+
+.validation-message{
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.button-container > button {
+    width: 10rem;
+    height: 2rem;
+    margin: 10px;
+    border-radius: 10%;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    background-color: rgb(37, 36, 36);
+}
+
+button:hover{
+    transform: translateY(-2px);
+}
+
+label, input {
+    margin-bottom: 0.5rem;
+}
+
+label {
+    margin-left: 0.5rem;
+}
+
+

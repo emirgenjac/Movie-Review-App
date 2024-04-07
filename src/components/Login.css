@@ -1,0 +1,80 @@
+
+.login-div-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-width: 100%;
+}
+
+.login-div{
+    width: 25rem;
+    height: 25rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr  1fr 1fr;
+    background-color: var(--sec-color);
+    box-shadow: var(--box-shadow);
+}
+
+.login-div > .login-header {
+    display: flex;
+    justify-content: center;
+}
+
+.login-header{
+    font-family: var(--font-family);
+    color: var(--text-color);
+    font-size: 1.5em;
+    max-width: 25rem;
+}
+
+.login-form{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 25rem;
+    max-width: 25rem;
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+.validation-message{
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.button-container > button {
+    width: 10rem;
+    height: 2rem;
+    margin: 10px;
+    border-radius: 10%;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    background-color: rgb(37, 36, 36);
+}
+
+button:hover{
+    transform: translateY(-2px);
+}
+
+label{
+    margin-right: 4rem;
+}
+
+
+.login-info1, .login-info2{
+    height: 1rem;
+    width: 100%;
+    padding: 20px;
+}
+

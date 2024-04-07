@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Link, Route, Routes, Navigate} from 'react-router-dom'
+import AuthenticationPage from './components/AuthenticationPage';
+import Register from './components/Register';
+import Login from './components/Login';
+import Home from './components/Home';
+import Reviews from './components/Reviews';
+import Watchlist from './components/Watchlist';
+
 import './App.css';
+import { AppProvider } from './components/AppContext';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <AppProvider>
+    <Router>
+      <Routes>
+        <Route path="/" element={<AuthenticationPage />} exact/>
+        <Route path='/register' element={<Register />} exact/>
+        <Route path='/login' element={<Login />} exact/>
+        <Route path='/home' element={<Home />} exact/>
+        <Route path='/watchlist' element={<Watchlist />} exact/>
+        <Route path='/reviews' element={<Reviews />} exact/>
+        {/* Nakon sto dodas USERE promijeni path u /:uid/...*/}
+        <Route path='/*' element={<Navigate to="/"/>}/> 
+
+      </Routes>
+    </Router>
+    </AppProvider>
+  )
 }
 
 export default App;

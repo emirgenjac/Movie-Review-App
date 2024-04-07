@@ -1,0 +1,207 @@
+*{
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto;
+    background-color: var(--main-bg-color);
+}
+
+nav{
+    background-color: rgba(177, 79, 18, 0.913);
+    height:10vh;
+    width: 100%;
+    position: fixed;
+    margin: 0;
+    top: 0;
+}
+
+
+li{
+    display: block;
+    padding: 5px;
+    color: var(--text-color);
+    float: right;
+    margin-right: 5rem;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 12vh;
+}
+
+.main{
+    width: 90vw;
+    height: 80vh;
+    margin-bottom: 0.5rem;
+}
+
+.movie-container-with-filter{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(177, 79, 18, 0.913);
+   /* display: grid;
+    grid-template-columns: 90% 10%;*/
+    display: flex;
+}
+
+.movie-container{
+    flex: 9;
+    width: 80%;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    overflow: auto;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.movie-filter {
+    flex: 2;
+    width: 20rem;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+input {
+    height: 1rem;
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+    margin: 5rem;
+    
+
+}
+
+.radio-filter {
+font-size: 10px;
+display: grid;
+grid-template-rows: 1fr 1fr 1fr;
+}
+
+label{
+    width: 50%;
+    
+}
+
+input{
+    width: 70%;
+}
+
+button {
+    height: 2rem;
+}
+
+#reset {
+    width: 99%;
+    height: 2rem;
+}
+.load-more-container {
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load-more {
+    background-color: var(--sec-color);
+}
+
+.load-more:active {
+    background-color: rgba(177, 79, 18, 0.5);
+}
+
+option {
+    color:black;
+}
+
+.title-home{
+    float: left;
+    font-size: 30px;
+}
+
+.nav-links-text {
+    font-size: 20px;
+}
+
+@media only screen and (max-width:600px){
+    ul {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .nav-links-text, .title-home {
+        font-size: 12px;
+        padding: 0.2rem;
+        width: 0.1rem;
+    }
+
+
+    
+        .main-container {
+            flex-direction: column; /* Stack items vertically on small screens */
+            margin-top: 6vh; /* Adjust margin as needed */
+        }
+        body {
+
+            overflow-y: auto;
+        }
+        .main {
+            height: auto; /* Allow the main container to adjust its height based on content */
+        }
+    
+        .movie-container-with-filter {
+            flex-direction: column; /* Stack movie container and filter vertically on small screens */
+        }
+    
+        .movie-container {
+            width: 100%; /* Occupy full width on small screens */
+        }
+    
+        .movie-filter {
+            width: 100%; /* Occupy full width on small screens */
+            margin-top: 1rem; /* Add some top margin for separation */
+        }
+    
+        .movies {
+            grid-template-columns: 1fr; /* Display movies in a single column on small screens */
+            gap: 2rem; /* Adjust the gap between movies */
+            margin: 2rem; /* Adjust the margin around movies */
+        }
+    
+        .load-more {
+            left: 50%; /* Center the load more button */
+        }
+    
+    
+}
+
+@media only screen and (min-width: 600px) and (max-width:1024px) {
+    .movies {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin: 0;
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    .movies {
+        margin: 0;
+       gap: 0.5rem;
+    }
+  }
+  
